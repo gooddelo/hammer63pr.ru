@@ -1,0 +1,22 @@
+.button-link {
+  @include flex-center;
+  width: 100%;
+
+  &--intro {
+    min-height: 21px;
+    border: 1px solid $vivid-yellow;
+    background-color: transparent;
+    color: $vivid-yellow;
+    @include font(10, 12, 500);
+  }
+
+  &--about {
+    max-width: 611px;
+    background-color: $vivid-yellow;
+    min-height: 50px;
+    color: $mostly-black;
+    @include font(14, 17, 600);
+    border-radius: 30px;
+    margin-bottom: 35px;
+  }
+}

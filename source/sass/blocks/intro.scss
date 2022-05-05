@@ -1,0 +1,108 @@
+.intro {
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    @include font(61, 51, 800);
+    background: linear-gradient(0deg, $vivid-yellow 0%, $main-white 100%);
+    text-transform: uppercase;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    padding-bottom: 5px;
+  }
+
+  p {
+    @include font(12, 15, 400);
+    color: $main-white;
+    letter-spacing: -0.1px;
+    text-align: center;
+  }
+}
+
+.intro__wrapper {
+  padding: 20px 0;
+  position: relative;
+  min-height: 515px;
+}
+
+.intro__offer {
+  margin-top: 33px;
+
+  p {
+    color: $vivid-yellow;
+    @include font(14, 17, 700);
+    letter-spacing: 0;
+    padding-bottom: 2px;
+    text-align: left;
+  }
+
+  span {
+    border-bottom: 1px solid $vivid-yellow;
+  }
+}
+
+.intro__list {
+  padding-left: 15px;
+  margin-top: 37px;
+}
+
+.intro__item {
+  @include font(12, 15, 400);
+  color: $main-white;
+  padding-bottom: 11px;
+  letter-spacing: 0.15px;
+
+  span {
+    border-bottom: 1px solid $main-white;
+  }
+}
+
+.intro__address {
+  width: 134px;
+  margin-left: 3px;
+
+  p {
+    @include font(9, 10, 400);
+    text-align: left;
+    padding-bottom: 5px;
+    text-align: center;
+  }
+
+  svg {
+    vertical-align: sub;
+  }
+}
+
+.intro__img {
+  position: absolute;
+  top: 287px;
+  right: 9px;
+  z-index: -1;
+
+  &::before {
+    content: "";
+    background-image: url("../img/intro/intro-backlight.svg");
+    background-repeat: no-repeat;
+    width: 545px;
+    height: 594px;
+    position: absolute;
+    left: -224px;
+    top: -150px;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    background-image: url("../img/intro/intro-lightning-bolts.svg");
+    position: absolute;
+    width: 270px;
+    height: 247px;
+    top: 2px;
+    left: -88px;
+  }
+}
