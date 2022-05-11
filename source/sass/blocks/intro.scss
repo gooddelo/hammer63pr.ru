@@ -1,4 +1,26 @@
 .intro {
+  position: relative;
+  width: 100%;
+
+  @supports not (background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer.webp")) {
+    background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer.jpg");
+  }
+
+  background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+
+  @include retina {
+    @supports not (background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer@2x.webp")) {
+      background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer@2x.jpg");
+    }
+
+    background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer@2x.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
 
   h1,
   p {
@@ -14,6 +36,12 @@
     -webkit-text-fill-color: transparent;
     text-align: center;
     padding-bottom: 5px;
+
+    @media (min-width: $tablet-width) {
+      text-align: left;
+      @include resize-txt(135, 105);
+      padding-bottom: 18px;
+    }
   }
 
   p {
@@ -21,24 +49,129 @@
     color: $main-white;
     letter-spacing: -0.1px;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      @include resize-txt(26, 32);
+      font-weight: 500;
+      text-align: left;
+      padding-left: 9px;
+      letter-spacing: 0.0px;
+    }
   }
 }
 
 .intro__wrapper {
-  padding: 20px 0;
+  padding: 0 9px;
   position: relative;
-  min-height: 515px;
+  min-height: 565px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    min-height: 952px;
+  }
+}
+
+.intro__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  max-width: 1002px;
+  width: 100%;
+  margin: 0 auto 33px;
+  padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  a {
+    @include font(12, 14, 400);
+    color: $main-white;
+    padding-right: 9px;
+
+    @media (min-width: $tablet-width) {
+      @include resize-txt(14, 17);
+      padding-right: 11px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.intro__contact {
+  display: flex;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: 15px;
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+
+  a {
+
+    &:hover,
+    &:focus-visible {
+      transition: $trans--300;
+      color: $vivid-yellow;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+.intro__address {
+  width: 220px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+
+    a {
+      padding: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    @include font(14, 17, 400);
+    color: $main-white;
+    text-align: left;
+    text-align: center;
+    padding: 0 0 8px 0;
+  }
+
+  a {
+    padding: 0;
+  }
+
+  svg {
+    vertical-align: sub;
+  }
 }
 
 .intro__offer {
   margin-top: 33px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 55px;
+  }
+
   p {
     color: $vivid-yellow;
-    @include font(14, 17, 700);
+    @include font(16, 20, 700);
     letter-spacing: 0;
     padding-bottom: 2px;
     text-align: left;
+
+    @media (min-width: $tablet-width) {
+      @include resize-txt(35, 43);
+    }
   }
 
   span {
@@ -48,33 +181,35 @@
 
 .intro__list {
   padding-left: 15px;
-  margin-top: 37px;
+  margin-top: 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 525px;
+    padding-left: 28px;
+    margin-top: 71px;
+    margin-bottom: 46px;
+  }
 }
 
 .intro__item {
-  @include font(12, 15, 400);
+  @include font(14, 17, 400);
   color: $main-white;
   padding-bottom: 11px;
   letter-spacing: 0.15px;
 
+  @media (min-width: $tablet-width) {
+    @include resize-txt(18, 22);
+    font-weight: 600;
+    padding-bottom: 31px;
+    letter-spacing: 0;
+  }
+
   span {
     border-bottom: 1px solid $main-white;
   }
-}
 
-.intro__address {
-  width: 134px;
-  margin-left: 3px;
-
-  p {
-    @include font(9, 10, 400);
-    text-align: left;
-    padding-bottom: 5px;
-    text-align: center;
-  }
-
-  svg {
-    vertical-align: sub;
+  a {
+    color: $vivid-yellow;
   }
 }
 

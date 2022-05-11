@@ -1,17 +1,59 @@
 .about {
   border-radius: 50% 50% 0% 0% / 7% 7% 85% 85%;
   background: linear-gradient(0deg, $mostly-black 0, $footer-bcg 100%);
-  min-height: 447px;
+  min-height: 429px;
+  position: relative;
+  z-index: 2;
+  margin-top: -30px;
+
+  @media (min-width: $tablet-width) {
+    border-radius: 50% 50% 0% 0% / 9% 9% 50% 50%;
+    margin-top: -57px;
+    min-height: 640px;
+  }
+
+  @media (min-width: $desktop-width) {
+    border-radius: 50% 50% 0% 0% / 20% 20% 50% 50%;
+    margin-top: -137px;
+  }
 }
 
 .about__desc {
-  padding: 53px 0 17px;
+  padding: 53px 0 5px;
   letter-spacing: 0.1px;
 
+  @media (min-width: $tablet-width) {
+    padding-top: 138px;
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  h2,
   p {
-    @include font(12, 15, 600);
     margin: 0;
+  }
+
+  h2 {
+    @include font(16, 20, 700);
+    color: $vivid-yellow;
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 32px;
+
+    @media (min-width: $tablet-width) {
+      @include resize-txt(30, 37);
+      padding-bottom: 49px;
+    }
+  }
+
+  p {
+    @include font(14, 17, 600);
     color: $main-white;
+
+    @media (min-width: $tablet-width) {
+      @include resize-txt(20, 26);
+    }
   }
 
   span {
@@ -21,33 +63,63 @@
 
 .about__work-schedule {
   margin-bottom: 48px;
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 0;
+  }
 
   p {
-    @include font(12, 15, 600);
+    @include font(14, 17, 600);
     margin: 0;
     color: $vivid-yellow;
     padding-bottom: 3px;
+
+    @media (min-width: $tablet-width) {
+      @include resize-txt(20, 26);
+    }
   }
 }
 
-.about__list {
+.about__work-list {
   @include reset-list;
   display: flex;
   flex-direction: column;
 }
 
-.about__list-item {
-  @include font(12, 15, 600);
-    color: $main-white;
+.about__features-list {
+  padding-left: 20px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 28px;
+    margin-bottom: 40px;
+  }
 }
 
-.about__more {
-  @include font(12, 15, 500);
-  color: $main-white;
-  margin: 0;
-  padding-bottom: 20px;
+.about__work-item,
+.about__features-item {
+  @include font(14, 17, 600);
 
-  a {
-    color: $vivid-yellow;
+  @media (min-width: $tablet-width) {
+    @include resize-txt(20, 26);
+  }
+}
+
+.about__work-item {
+  color: $main-white;
+}
+
+.about__features-item {
+  color: $vivid-yellow;
+  padding-bottom: 5px;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 10px;
   }
 }
