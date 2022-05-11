@@ -2,26 +2,6 @@
   position: relative;
   width: 100%;
 
-  @supports not (background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer.webp")) {
-    background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer.jpg");
-  }
-
-  background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer.webp");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
-
-  @include retina {
-    @supports not (background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer@2x.webp")) {
-      background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer@2x.jpg");
-    }
-
-    background: linear-gradient(0deg, rgba(50, 31, 51, 0.7) 0%, rgba(50, 31, 51, 0.7) 100%), url("../img/intro/intro-personal-trainer@2x.webp");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-  }
-
   h1,
   p {
     margin: 0;
@@ -67,91 +47,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    min-height: 952px;
-  }
-}
-
-.intro__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  max-width: 1002px;
-  width: 100%;
-  margin: 0 auto 33px;
-  padding: 0 10px;
-
-  @media (min-width: $tablet-width) {
-    flex-direction: row;
-  }
-
-  a {
-    @include font(12, 14, 400);
-    color: $main-white;
-    padding-right: 9px;
-
-    @media (min-width: $tablet-width) {
-      @include resize-txt(14, 17);
-      padding-right: 11px;
-      letter-spacing: 0.5px;
-    }
-  }
-}
-
-.intro__contact {
-  display: flex;
-  margin-bottom: 7px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-    margin-right: auto;
-    margin-left: 15px;
-  }
-
-  svg {
-    margin-right: 5px;
-  }
-
-  a {
-
-    &:hover,
-    &:focus-visible {
-      transition: $trans--300;
-      color: $vivid-yellow;
-    }
-
-    &:active {
-      opacity: 0.7;
-    }
-  }
-}
-
-.intro__address {
-  width: 220px;
-
-  @media (min-width: $tablet-width) {
-    margin-top: 20px;
-
-    a {
-      padding: 0;
-    }
-  }
-
-  p {
-    margin: 0;
-    @include font(14, 17, 400);
-    color: $main-white;
-    text-align: left;
-    text-align: center;
-    padding: 0 0 8px 0;
-  }
-
-  a {
-    padding: 0;
-  }
-
-  svg {
-    vertical-align: sub;
+    min-height: 845px;
   }
 }
 
@@ -210,34 +106,5 @@
 
   a {
     color: $vivid-yellow;
-  }
-}
-
-.intro__img {
-  position: absolute;
-  top: 287px;
-  right: 9px;
-  z-index: -1;
-
-  &::before {
-    content: "";
-    background-image: url("../img/intro/intro-backlight.svg");
-    background-repeat: no-repeat;
-    width: 545px;
-    height: 594px;
-    position: absolute;
-    left: -224px;
-    top: -150px;
-    z-index: -1;
-  }
-
-  &::after {
-    content: "";
-    background-image: url("../img/intro/intro-lightning-bolts.svg");
-    position: absolute;
-    width: 270px;
-    height: 247px;
-    top: 2px;
-    left: -88px;
   }
 }

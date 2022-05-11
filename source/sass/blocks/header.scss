@@ -1,3 +1,87 @@
 .header {
   flex: 0 0 auto;
 }
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 80px;
+  max-width: 1020px;
+  width: 100%;
+  margin: 0 auto 33px;
+  padding: 0 10px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+  }
+
+  a {
+    @include font(12, 14, 400);
+    color: $main-white;
+    padding-right: 9px;
+
+    @media (min-width: $tablet-width) {
+      @include resize-txt(14, 17);
+      padding-right: 11px;
+      letter-spacing: 0.5px;
+    }
+  }
+}
+
+.header__contact {
+  display: flex;
+  margin-bottom: 7px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: 15px;
+  }
+
+  svg {
+    margin-right: 5px;
+  }
+
+  a {
+
+    &:hover,
+    &:focus-visible {
+      transition: $trans--300;
+      color: $vivid-yellow;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}
+
+.header__address {
+  width: 220px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+
+    a {
+      padding: 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    @include font(14, 17, 400);
+    color: $main-white;
+    text-align: left;
+    text-align: center;
+    padding: 0 0 8px 0;
+  }
+
+  a {
+    padding: 0;
+  }
+
+  svg {
+    vertical-align: sub;
+  }
+}

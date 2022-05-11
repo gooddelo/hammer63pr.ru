@@ -8,13 +8,11 @@
 
   @media (min-width: $tablet-width) {
     border-radius: 50% 50% 0% 0% / 9% 9% 50% 50%;
-    margin-top: -57px;
     min-height: 640px;
   }
 
   @media (min-width: $desktop-width) {
     border-radius: 50% 50% 0% 0% / 20% 20% 50% 50%;
-    margin-top: -137px;
   }
 }
 
