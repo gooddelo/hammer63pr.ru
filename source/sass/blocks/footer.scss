@@ -7,35 +7,23 @@
   min-height: 287px;
   background-color: $footer-bcg;
   border-radius: 20px;
-  padding: 29px 33px 22px;
+  padding: 27px 33px 22px;
 
   @media (min-width: $tablet-width) {
     min-height: 355px;
     max-width: 1045px;
     margin: 0 auto;
-  }
-
-  a,
-  h2 {
-    @include font(12, 15, 400);
-    color: $main-white;
-
-    @media (min-width: $tablet-width) {
-      @include resize-txt(20, 24);
-    }
-  }
-
-  h2 {
-    font-weight: 700;
-    margin: 0;
-    text-align: center;
-    padding-bottom: 23px;
+    padding-top: 67px;
   }
 
   a {
+    @include font(12, 15, 400);
+    color: $main-white;
     padding-bottom: 5px;
+    width: fit-content;
 
     @media (min-width: $tablet-width) {
+      @include resize-txt(18, 22);
 
       &:hover,
       &:focus-visible {
@@ -53,7 +41,7 @@
 .footer__inner {
 
   @media (min-width: $tablet-width) {
-    width: 660px;
+    width: 670px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -65,7 +53,6 @@
   @include reset-list;
   display: flex;
   flex-direction: column;
-  padding-top: 8px;
 
   @media (min-width: $tablet-width) {
     flex-flow: row wrap;
@@ -76,12 +63,13 @@
 }
 
 .footer__contacts-item {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: column;
 
-  &:last-child {
-    padding-bottom: 0;
+  @media (min-width: $tablet-width) {
+    width: 300px;
+    padding-bottom: 22px;
   }
 
   p {
@@ -92,7 +80,7 @@
 .footer__social-list {
   @include reset-list;
   display: flex;
-  margin-top: 18px;
+  margin-top: 8px;
 
   li {
     margin-right: 15px;
@@ -108,5 +96,12 @@
       width: 56px;
       height: 56px;
     }
+  }
+}
+
+.footer__email {
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: auto;
   }
 }

@@ -10,6 +10,7 @@
     @include font(10, 12, 500);
 
     @media (min-width: $tablet-width) {
+      @include resize-txt(15, 18);
 
       &:hover,
       &:focus-visible {
@@ -37,6 +38,7 @@
       min-height: 71px;
       margin-left: 10px;
       @include resize-txt(18, 22);
+      order: -1;
 
       &:hover,
       &:focus-visible {

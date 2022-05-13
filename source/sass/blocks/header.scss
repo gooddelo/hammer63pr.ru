@@ -7,13 +7,42 @@
   flex-direction: column;
   align-items: center;
   min-height: 80px;
-  max-width: 1020px;
   width: 100%;
-  margin: 0 auto 33px;
-  padding: 0 10px;
+  margin: 0 auto 24px;
+
+  @media (min-width: 955px) {
+    flex-direction: row;
+    margin-bottom: 64px;
+  }
+}
+
+.header__logo {
 
   @media (min-width: $tablet-width) {
-    flex-direction: row;
+    width: 150px;
+    height: 70px;
+  }
+}
+
+.header__contact {
+  display: flex;
+  margin-bottom: 7px;
+  align-items: center;
+
+  @media (min-width: 955px) {
+    margin-bottom: 0;
+    margin-right: auto;
+    margin-left: 36px;
+    align-items: center;
+  }
+
+  svg {
+    margin-right: 5px;
+
+    @media (min-width: $tablet-width) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   a {
@@ -22,28 +51,9 @@
     padding-right: 9px;
 
     @media (min-width: $tablet-width) {
-      @include resize-txt(14, 17);
-      padding-right: 11px;
-      letter-spacing: 0.5px;
+      @include resize-txt(20, 24);
+      padding-right: 29px;
     }
-  }
-}
-
-.header__contact {
-  display: flex;
-  margin-bottom: 7px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 0;
-    margin-right: auto;
-    margin-left: 15px;
-  }
-
-  svg {
-    margin-right: 5px;
-  }
-
-  a {
 
     &:hover,
     &:focus-visible {
@@ -60,14 +70,6 @@
 .header__address {
   width: 220px;
 
-  @media (min-width: $tablet-width) {
-    margin-top: 20px;
-
-    a {
-      padding: 0;
-    }
-  }
-
   p {
     margin: 0;
     @include font(14, 17, 400);
@@ -83,5 +85,24 @@
 
   svg {
     vertical-align: sub;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-top: 20px;
+    margin-right: 20px;
+    width: 310px;
+
+    a {
+      padding: 0;
+    }
+
+    p {
+      @include resize-txt(20, 24);
+    }
+
+    svg {
+      width: 18px;
+      height: 26px;
+    }
   }
 }

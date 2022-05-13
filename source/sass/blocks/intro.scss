@@ -21,6 +21,7 @@
       text-align: left;
       @include resize-txt(135, 105);
       padding-bottom: 18px;
+      order: -2;
     }
   }
 
@@ -36,31 +37,36 @@
       text-align: left;
       padding-left: 9px;
       letter-spacing: 0.0px;
+      order: -2;
     }
   }
 }
 
 .intro__wrapper {
-  padding: 0 9px;
+  padding: 0 9px 20px;
   position: relative;
-  min-height: 565px;
+  min-height: 525px;
 
   @media (min-width: $tablet-width) {
-    padding: 0;
-    min-height: 845px;
+    padding: 0 30px 20px;
+    min-height: 768px;
+    display: flex;
+    flex-flow: column wrap;
   }
 }
 
 .intro__offer {
-  margin-top: 33px;
+  margin-top: 40px;
 
   @media (min-width: $tablet-width) {
-    margin-top: 55px;
+    margin-top: 46px;
+    margin-bottom: 41px;
+    order: -2;
   }
 
   p {
     color: $vivid-yellow;
-    @include font(16, 20, 700);
+    @include font(21, 26, 700);
     letter-spacing: 0;
     padding-bottom: 2px;
     text-align: left;
@@ -76,13 +82,14 @@
 }
 
 .intro__list {
-  padding-left: 15px;
-  margin-top: 15px;
+  padding-left: 19px;
+  margin-top: 63px;
+  margin-bottom: 24px;
 
   @media (min-width: $tablet-width) {
-    width: 525px;
-    padding-left: 28px;
-    margin-top: 71px;
+    width: 560px;
+    padding-left: 43px;
+    margin-top: 33px;
     margin-bottom: 46px;
   }
 }
@@ -90,13 +97,13 @@
 .intro__item {
   @include font(14, 17, 400);
   color: $main-white;
-  padding-bottom: 11px;
+  padding-bottom: 24px;
   letter-spacing: 0.15px;
 
   @media (min-width: $tablet-width) {
-    @include resize-txt(18, 22);
+    @include resize-txt(20, 24);
     font-weight: 600;
-    padding-bottom: 31px;
+    padding-bottom: 34px;
     letter-spacing: 0;
   }
 
